@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892026488158",
+    "project_id": "final-year-project-a831e",
+    "storage_bucket": "final-year-project-a831e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892026488158:android:d864f5201f0577db503bcf",
+        "android_client_info": {
+          "package_name": "com.teachease.leftover_food_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc9Zl7-k7M2XhCpPBWS13cVUjiMe6Pbg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ── AI Dataset Rules ──────────────────────────────────────────
+    match /ai_dataset/{docId} {
+      // Authenticated users can create records
+      allow create: if request.auth != null;
+      // Only Admins can read, update, or delete dataset metadata
+      allow read, update, delete: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'Admin';
+    }
+    
+    // ── Dataset Logs Rules ────────────────────────────────────────
+    match /dataset_logs/{logId} {
+      allow create: if request.auth != null;
+      allow read: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'Admin';
+    }
+
+    // ── Default Fallback Rule ─────────────────────────────────────
+    // For all other collections, allow authenticated users by default.
+    // Replace this with your app's actual security rules as necessary.
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
