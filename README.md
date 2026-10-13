@@ -49,7 +49,7 @@ A Flutter application designed to help reduce food waste by connecting food dono
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/xSECURITYYx/leftover-food-app.git
+   git clone https://github.com/saudurrahman-me/leftover-food-app.git
    cd leftover_food_app
    ```
 
